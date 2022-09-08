@@ -5,7 +5,7 @@ const router = new Router();
 
 router.get("/library", async (req, res) => {
   const response = await Book.findAll({ include: [{ model: Author }] });
-  return;
+  return res.json(response);
 });
 
 router.post("/author", async (req, res) => {
