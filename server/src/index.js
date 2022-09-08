@@ -1,6 +1,7 @@
 const express = require("express");
 
 const sequelize = require("./db");
+const router = require("./router");
 
 const PORT = 3000;
 
@@ -14,6 +15,7 @@ const start = async () => {
   await sequelize.sync({ logging: false });
 };
 
-app.use("api", router);
+app.use(express.json());
+app.use("/api", router);
 
-await start();
+start();

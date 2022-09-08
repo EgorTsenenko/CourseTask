@@ -11,6 +11,7 @@ const Author = db.define("author", {
 const Book = db.define("book", {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   name: { type: DataTypes.STRING },
+  price: { type: DataTypes.REAL },
   authorId: {
     type: DataTypes.INTEGER,
     references: { model: Author, key: "id" },
