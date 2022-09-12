@@ -9,7 +9,7 @@ router.get("/library", async (req, res) => {
 });
 
 router.post("/author", async (req, res) => {
-  let { lastName, firstName, country } = req.query;
+  let { lastName, firstName, country } = req.body;
   const author = await Author.create({
     lastName: lastName,
     firstName: firstName,
