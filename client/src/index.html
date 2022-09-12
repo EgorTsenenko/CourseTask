@@ -27,10 +27,6 @@
 
 <body background="./static/fon.jpg">
 
-
-
-
-
   <!-- Выравнивание с помощью CSS -->
   <div style="text-align:center; margin-top: 20%; margin: 100px;">
     <h3>База данных</h3>
@@ -46,6 +42,7 @@
     <button
       type="button"
       class="btn btn-success"
+      onclick="createAuthor()"
     >Заполнить БД</button>
 
     <button
@@ -55,7 +52,8 @@
     >Получить БД</button>
   </P>
 
-  <script src="./scripts/fetchData.js"></script>
+  <script src="./scripts/fetchLibrary.js"></script>
+  <script src="./scripts/createAuthor.js"></script>
 
 </body>
 
